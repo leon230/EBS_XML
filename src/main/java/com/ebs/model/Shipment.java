@@ -14,15 +14,13 @@ public class Shipment {
     private String transmission;
     private String errorMsg;
 
-    public Shipment(String id, String serviceProvider, String reasonCode, String stopNumber, String uploadStatus, String reasonCodeDate, String ack, String transmission) {
+    public Shipment(String id, String serviceProvider, String reasonCode, String stopNumber, String uploadStatus, String reasonCodeDate) {
         this.id = id;
         this.ServiceProvider = serviceProvider;
         this.ReasonCode = reasonCode;
         this.stopNumber = stopNumber;
         this.uploadStatus = uploadStatus;
         this.reasonCodeDate = reasonCodeDate;
-        this.ack = ack;
-        this.transmission = transmission;
     }
 
     public Shipment(String id) {

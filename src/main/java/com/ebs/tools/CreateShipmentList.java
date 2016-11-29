@@ -27,8 +27,7 @@ public class CreateShipmentList {
         for (Object item: rf.getArrList()
              ) {
                 sh = new Shipment(((HashMap<Integer, String>) item).get(0),((HashMap<Integer, String>) item).get(1),((HashMap<Integer, String>) item).get(2)
-                        ,((HashMap<Integer, String>) item).get(3),((HashMap<Integer, String>) item).get(4),((HashMap<Integer, String>) item).get(5)
-                        ,((HashMap<Integer, String>) item).get(6),((HashMap<Integer, String>) item).get(7));
+                        ,((HashMap<Integer, String>) item).get(3),((HashMap<Integer, String>) item).get(4),((HashMap<Integer, String>) item).get(5));
                 sh.setErrorMsg(shValid.FindError(sh));
 
             arrTemp.add(sh);

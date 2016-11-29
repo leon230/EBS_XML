@@ -1,5 +1,8 @@
 package com.ebs.config;
 
+import com.ebs.service.storage.transmission.Transmission;
+import com.ebs.service.storage.transmission.TransmissionImpl;
+import com.ebs.tools.GenerateXML;
 import com.ebs.validation.FileValidation;
 import org.apache.catalina.connector.Connector;
 import org.apache.coyote.http11.AbstractHttp11Protocol;
@@ -64,4 +67,8 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
     }
     @Bean
     public FileValidation fileValidation(){return new FileValidation();}
+    @Bean
+    public GenerateXML generateXML(){return new GenerateXML();}
+    @Bean
+    Transmission transmission(){return new TransmissionImpl();}
 }

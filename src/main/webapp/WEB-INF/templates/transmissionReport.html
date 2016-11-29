@@ -15,6 +15,8 @@
     <th>Stop </th>
     <th>Status </th>
     <th>Date </th>
+    <th>Ack </th>
+    <th>Transmission </th>
     <th>Error code</th>
 
     </thead>
@@ -26,6 +28,8 @@
         <td><a th:text="${tableItem.stopNumber}"></a></td>
         <td><a th:text="${tableItem.uploadStatus}"></a></td>
         <td><a th:text="${tableItem.reasonCodeDate}"></a></td>
+        <td><a th:text="${tableItem.ack}"></a></td>
+        <td><a th:text="${tableItem.transmission}"></a></td>
         <td><a th:text="${tableItem.errorMsg}"></a></td>
     </tr>
     </tbody>
@@ -36,8 +40,6 @@
 
 <div>
     <a href ="/">Back</a>
-    <br />
-    <a href ="/sendTransmission">Send Transmission to OTM</a>
 </div>
 
 
