@@ -16,18 +16,18 @@ public class ShipmentValidation {
     EARLY PICKUP DATE VALIDATION
  */
 
-         if (CheckDateFormat(sh.getEarlyPickDate())){
-            errorMsg = errorMsg + "Early pickup date incorrect format, ";
+         if (CheckDateFormat(sh.getReasonCodeDate())){
+            errorMsg = errorMsg + "Date incorrect format, ";
         }
-        else if (DateUtil.parse(sh.getEarlyPickDate()).isAfter(now())){
-             errorMsg = errorMsg + "Early pickup date in the future, ";
+        else if (DateUtil.parse(sh.getReasonCodeDate()).isAfter(now())){
+             errorMsg = errorMsg + "Sate in the future, ";
          }
 
 /**
  *  ADDITIONAL COST VALIDATION
  */
-        if(sh.getAddCostTypeVal() != null && sh.getAddCostTypeVal().contains(",")){
-                errorMsg = errorMsg + "Incorrect digit separator, ";
+        if(sh.getServiceProvider() == null){
+                errorMsg = errorMsg + "TSP incorrect, ";
 
          }
 

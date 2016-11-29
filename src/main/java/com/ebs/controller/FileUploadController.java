@@ -63,7 +63,6 @@ public class FileUploadController {
     public String deleteFiles(HttpServletRequest request){
 
         storageService.deleteFile(request.getParameter("filename"));
-
         return "redirect:/";
     }
 
