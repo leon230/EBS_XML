@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
+</head>
+<body>
+
+<div class = "uploadContainer">
+
+    <div class = "bluemsg" th:if="${message}">
+        <h1 th:text="${message}"/>
+    </div>
+
+        <form method="POST" enctype="multipart/form-data" action="/">
+            <table class = "mainTable">
+                <tbody>
+                <tr><td>Validation tool upload XLSX</td><td></td></tr>
+                <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                <tr><td><input type="submit" value="Upload" /></td><td></td></tr>
+                </tbody>
+            </table>
+        </form>
+
+
+    <div>
+
+        <table class = "mainTable">
+            <thead>
+            <th>Filename</th>
+            <th >Action</th>
+            </thead>
+            <tbody>
+            <tr  th:each="file : ${files}">
+                <td ><a th:href="${file}" th:text="${file}"></a></td>
+                <td ><a th:href="@{validateFile(filename=${file})}">Validate</a> <a th:href="@{deleteFile(filename=${file})}">Delete</a></td>
+            </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>
