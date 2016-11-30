@@ -22,12 +22,6 @@ public class TransmissionImpl implements Transmission {
     private String pass = "CHANGEME";
     private String serverURL = "https://otmunlvdev4pub.oracleoutsourcing.com/GC3/glog.integration.servlet.WMServlet";
     private File fileto = new File("XMLtransmission.xml");
-    private String maindomain = "ULE";
-    private String domain = "ULE/PR";
-    private String statuscode = "0002";
-    private String stoptype = "Stop Num";
-    private String userrole = "ULE CSS";
-    private String xmlTransmissionText = "";
 
     @Override
     public String sendTransmission(String urlParameters) throws Exception{

@@ -62,7 +62,7 @@ public class ShipmentValidation {
 
     private boolean CheckDateFormat(String dateString){
 
-        if (dateString.length() != 12 ){
+        if (dateString.length() != 14 ){
             return true;
         }
         try {

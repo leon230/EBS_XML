@@ -13,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -62,8 +61,7 @@ public class FileValidateController {
 
         for (Shipment sh: tableList) {
             if (sh.getErrorMsg() == null || sh.getErrorMsg().isEmpty()) {
-                xmlTransmissionText = generateXML.XMLgenerate("ULE/PR.HOMIK_L_EBS", "L123", "LUKASZ.HOMIK@UNILEVER.COM", "ULE" + "." + sh.getServiceProvider(),
-                        "ULE/PR", sh.getId(), "0002", "20161221000000", "0001", "", "Stop Num", "1", "ULE CSS");
+                xmlTransmissionText = generateXML.XMLgenerate(sh.getServiceProvider(), sh.getId(), sh.getReasonCodeDate(), sh.getReasonCode(), sh.getUploadStatus(), sh.getStopNumber());
                 try {
                     sh.setAck(transmission.sendTransmission(xmlTransmissionText));
                     sh.setTransmission("Transmission successfull");
