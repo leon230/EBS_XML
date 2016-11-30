@@ -78,7 +78,7 @@ public class TransmissionImpl implements Transmission {
     @Override
     public void sendTransmissionfILE(String urlParameters) throws Exception {
 
-        try (FileWriter fon = new FileWriter(fileto + "_" + calendar.getTime())) {
+        try (FileWriter fon = new FileWriter(fileto)) {
             fon.write(urlParameters);
         } catch (IOException exc) {
             System.out.println("File Error");

@@ -58,8 +58,8 @@ public class FileValidateController {
 
         for (Shipment sh: tableList) {
             System.out.println("Sending " + sh.getId());
-            xmlTransmissionText = generateXML.XMLgenerate("ULE.HOMIK_L_EBS","L123","LUKASZ.HOMIK@UNILEVER.COM","ULE" + "." + "T74951","ULE/PR",sh.getId(),
-                    "0002","20161221000000", "0001","","Stop Num","1","ULE CSS");
+            xmlTransmissionText = generateXML.XMLgenerate("ULE/PR.HOMIK_L_EBS","L123","LUKASZ.HOMIK@UNILEVER.COM","ULE" + "." + sh.getServiceProvider(),
+                    "ULE/PR",sh.getId(),"0002","20161221000000", "0001","","Stop Num","1","ULE CSS");
 
             System.out.println(xmlTransmissionText);
             System.out.println("\n");
