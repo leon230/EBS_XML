@@ -2,6 +2,7 @@ package com.ebs.service.transmission;
 
 import com.ebs.tools.GenerateXML;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import java.io.*;
 import java.net.Authenticator;
 import java.net.HttpURLConnection;
@@ -53,12 +54,7 @@ public class TransmissionImpl implements Transmission {
         wr.writeBytes(String.valueOf(urlParameters));
         wr.flush();
         wr.close();
-
-        int responseCode = con.getResponseCode();
-        System.out.println("\nSending 'POST' request to URL : " + serverURL);
-//        System.out.println("Post parameters : " + urlParameters);
-        System.out.println("Response Code : " + responseCode);
-
+//        int responseCode = con.getResponseCode();
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(con.getInputStream()));
         String inputLine;
@@ -71,7 +67,7 @@ public class TransmissionImpl implements Transmission {
 
         sendTransmissionfILE(urlParameters);
         //print result
-        System.out.println(response.toString());
+//        System.out.println(response.toString());
         return response.toString();
     }
 
