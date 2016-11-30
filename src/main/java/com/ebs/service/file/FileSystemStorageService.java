@@ -1,4 +1,4 @@
-package com.ebs.service.storage;
+package com.ebs.service.file;
 
 import com.ebs.validation.FileValidation;
 import org.springframework.beans.factory.annotation.Autowired;

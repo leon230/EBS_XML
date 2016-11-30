@@ -55,10 +55,17 @@ hr {
 	border-color: #bce8f1;
 }
 
-.uploadContainer{
+.mainContainer{
     background-color: #fff;
     margin: auto;
     width: 50%;
     border: 3px solid black;
     padding: 10px;
+}
+.tableContainer{
+    background-color: #fff;
+    margin: auto;
+    width: 80%;
+    border: 1px solid transparent;
+    padding: 5px;
 }

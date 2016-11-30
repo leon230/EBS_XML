@@ -42,7 +42,7 @@ public class FileValidation {
         template.setTemplateFileName(fileName);
         templateType = template.ReadTemplateType();
 
-        if (templateType.equals("SHIPMENT_STATUS")){
+        if (templateType.equals(environment.getRequiredProperty("template.type"))){
             return true;
         }
         return false;

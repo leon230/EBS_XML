@@ -1,7 +1,7 @@
 package com.ebs;
 
-import com.ebs.service.storage.StorageProperties;
-import com.ebs.service.storage.StorageService;
+import com.ebs.service.file.StorageProperties;
+import com.ebs.service.file.StorageService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

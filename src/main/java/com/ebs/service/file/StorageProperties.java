@@ -1,4 +1,4 @@
-package com.ebs.service.storage;
+package com.ebs.service.file;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

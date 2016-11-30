@@ -1,6 +1,6 @@
 package com.ebs.controller;
 
-import com.ebs.service.storage.StorageService;
+import com.ebs.service.file.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;

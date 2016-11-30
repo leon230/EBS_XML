@@ -1,4 +1,4 @@
-package com.ebs.service.storage.transmission;
+package com.ebs.service.transmission;
 
 import com.ebs.tools.GenerateXML;
 import org.springframework.beans.factory.annotation.Autowired;

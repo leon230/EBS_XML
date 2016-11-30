@@ -1,4 +1,4 @@
-package com.ebs.service.storage.transmission;
+package com.ebs.service.transmission;
 
 /**
  * Created by Leon on 2016-11-29.

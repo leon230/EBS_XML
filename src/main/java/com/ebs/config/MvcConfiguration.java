@@ -1,7 +1,7 @@
 package com.ebs.config;
 
-import com.ebs.service.storage.transmission.Transmission;
-import com.ebs.service.storage.transmission.TransmissionImpl;
+import com.ebs.service.transmission.Transmission;
+import com.ebs.service.transmission.TransmissionImpl;
 import com.ebs.tools.GenerateXML;
 import com.ebs.validation.FileValidation;
 import org.apache.catalina.connector.Connector;
