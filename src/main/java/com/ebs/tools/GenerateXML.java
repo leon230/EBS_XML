@@ -21,7 +21,6 @@ public class GenerateXML {
     private final String user = "ULE/PR.HOMIK_L_EBS";
     private final String pass = "L123";
     private final String rcid = "0001";
-    //calnow = Calendar.getInstance();
 
     public String XMLgenerate(String tsp, String shid, String eventdate, String statuscode, String stopvalue){
         calnow = Calendar.getInstance();
