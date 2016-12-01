@@ -23,7 +23,7 @@ public class GenerateXML {
     private final String rcid = "0001";
     //calnow = Calendar.getInstance();
 
-    public String XMLgenerate(String tsp, String shid, String eventdate, String statuscode, String remarks, String stopvalue){
+    public String XMLgenerate(String tsp, String shid, String eventdate, String statuscode, String stopvalue){
         calnow = Calendar.getInstance();
         xmlheader = "";
         xmlbody = "";
@@ -64,3 +64,5 @@ public class GenerateXML {
         return xmlheader + xmlbody + xmlfooter;
     }
 }
+//TODO keep variables in properties file
+//TODO create drop down lists in GUI

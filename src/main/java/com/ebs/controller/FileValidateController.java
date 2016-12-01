@@ -61,10 +61,10 @@ public class FileValidateController {
 
         for (Shipment sh: tableList) {
             if (sh.getErrorMsg() == null || sh.getErrorMsg().isEmpty()) {
-                xmlTransmissionText = generateXML.XMLgenerate(sh.getServiceProvider(), sh.getId(), sh.getReasonCodeDate(), sh.getReasonCode(), sh.getUploadStatus(), sh.getStopNumber());
+                xmlTransmissionText = generateXML.XMLgenerate(sh.getServiceProvider(), sh.getId(), sh.getReasonCodeDate(), sh.getReasonCode(), sh.getStopNumber());
                 try {
                     sh.setAck(transmission.sendTransmission(xmlTransmissionText));
-                    sh.setTransmission("Transmission successfull");
+                    sh.setTransmission("Transmission successful");
                 } catch (Exception e) {
                     sh.setAck("Transmission Error");
                 }
